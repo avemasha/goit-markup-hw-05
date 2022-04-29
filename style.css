@@ -8,6 +8,7 @@
   --staff-background-color: #f5f4fa;
   --logo-web-color: #000000;
   --icon-color: #afb1b8;
+  --backdrop-image-work: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -293,6 +294,30 @@ img {
 }
 .work-list li + li {
   margin-left: 30px;
+}
+.work-overlay {
+  position: relative;
+}
+
+.backdrop-work {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--backdrop-image-work);
+  min-width: 370px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-image-paragraph {
+  color: var(--main-background-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
 }
 /* ////////////clients section//////////// */
 .clients {
@@ -600,10 +625,28 @@ img {
 }
 .modal {
   position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-height: 581px;
   min-width: 528px;
   background-color: var(--main-background-color);
+}
+
+.hide-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 30px;
+  width: 30px;
+  background-color: var(--main-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
