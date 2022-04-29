@@ -8,7 +8,8 @@
   --staff-background-color: #f5f4fa;
   --logo-web-color: #000000;
   --icon-color: #afb1b8;
-  --backdrop-image-work: rgba(47, 48, 58, 0.8);
+  --accent-overlay: rgba(33, 150, 243, 0.9);
+  --image-overlay: rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -144,7 +145,8 @@ img {
 .contacts .link {
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
-
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
@@ -295,30 +297,30 @@ img {
 .work-list li + li {
   margin-left: 30px;
 }
+
 .work-overlay {
   position: relative;
 }
-
 .backdrop-work {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--backdrop-image-work);
-  min-width: 370px;
-  min-height: 70px;
+  width: 370px;
+  height: 70px;
+  background-color: var(--image-overlay);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .overlay-image-paragraph {
   color: var(--main-background-color);
-
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.1;
+
   letter-spacing: 0.03em;
 }
+
 /* ////////////clients section//////////// */
 .clients {
   background-color: var(--main-background-color);
@@ -451,10 +453,7 @@ img {
   font-size: 16px;
   padding: 6px 22px;
   line-height: 1.6;
-  min-width: 145px;
-  min-height: 38px;
-  left: 712px;
-  top: 174px;
+
   border-radius: 4px;
 }
 .button:focus,
@@ -473,18 +472,23 @@ img {
   margin-top: -30px;
 }
 .projects-item {
+  position: relative;
   width: 370px;
   margin-left: 30px;
   margin-top: 30px;
   border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-item:nth-child(3n + 1) {
   margin-left: 0;
 }
-/* .projects-item:nth-child(-n + 6) {
-  margin-bottom: 30px;
-} */
 
 .projects-item .image {
   width: 370px;
@@ -516,7 +520,32 @@ img {
   margin: 0 auto;
 }
 
-/* footer */
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background-color: var(--accent-overlay);
+  padding: 63px 24px;
+  opacity: 0;
+}
+
+.projects-item:hover .item-overlay {
+  display: block;
+  opacity: 1;
+}
+
+.item-overlay-paragraph {
+  color: var(--main-background-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/*      FOOTER      */
+
 .footer {
   background-color: var(--hero-footer-background-color);
 
@@ -586,8 +615,6 @@ img {
 
 .footer .join {
   margin-left: 70px;
-  padding-top: 12px;
-  padding-bottom: 100px;
 }
 
 .member-source-icon-footer {
