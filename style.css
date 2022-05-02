@@ -89,9 +89,12 @@ img {
 
 .contacts {
   display: flex;
+
+  margin-left: auto;
+}
+.contacts li {
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-left: auto;
 }
 .contacts li + li {
   margin-left: 50px;
@@ -293,6 +296,9 @@ img {
 }
 
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
+.what-we-doing {
+  padding-top: 0;
+}
 .work-list {
   display: flex;
 }
@@ -493,19 +499,13 @@ img {
   margin-top: -30px;
 }
 .projects-item {
-  /* position: relative; */
+  position: relative;
   width: 370px;
   margin-left: 30px;
   margin-top: 30px;
   border: 1px solid #eeeeee;
   cursor: pointer;
-  box-shadow: none;
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .projects-item:hover,
 .projects-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -544,39 +544,6 @@ img {
   letter-spacing: 0.03em;
 
   margin: 0 auto;
-}
-
-.image-relative {
-  position: relative;
-  overflow: hidden;
-}
-.item-overlay {
-  position: absolute;
-  bottom: -1;
-  left: 0;
-  width: 370px;
-  height: 294px;
-  background-color: var(--accent-overlay);
-  padding: 63px 24px;
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-item:hover,
-.projects-item:focus .item-overlay {
-  display: flex;
-  opacity: 1;
-
-  transform: translateY(-294px);
-}
-
-.item-overlay-paragraph {
-  color: var(--main-background-color);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 }
 
 /*      FOOTER      */
