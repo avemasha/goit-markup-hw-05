@@ -688,6 +688,8 @@ img {
   padding-bottom: 222px;
   padding-right: 536px;
   padding-left: 536px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -697,6 +699,8 @@ img {
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
   transition-property: opacity;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -709,7 +713,8 @@ img {
   min-width: 528px;
   background-color: var(--main-background-color);
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
 }
 
